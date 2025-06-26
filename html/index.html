@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="main-header">
+  <div class="header-content">
+    <img src="https://img.icons8.com/?size=100&id=w8uA2lyOFNbd&format=png&color=000000"  class="logo">
+    <h1>Smart Calculator</h1>
+  </div>
+</header>
+
+<main class="calculator">
+  <h2>Calculate</h2>
+
+  <form id="calc-form">
+    <input type="number" id="num1" placeholder="Plese enter the first num" >
+    <select id="operator" >
+      <option>Please select an operator</option>
+      <option value="+">+</option>
+      <option value="-">−</option>
+      <option value="*">×</option>
+      <option value="/">/</option>
+    </select>
+    <input type="number" id="num2" placeholder="please enter the 2nd number">
+    <button type="submit" id="calculate">=</button>
+  </form>
+
+  <div class="result">
+    Result: <span id="output">0</span>
+  </div>
+
+  <h3>History</h3>
+  <ul id="history-list"></ul>
+</main>
+
+<script src="../js/index.js"></script>
+</body>
+</html>

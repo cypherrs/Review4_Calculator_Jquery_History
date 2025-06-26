@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: lawngreen;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* HEADER */
+.main-header {
+    background: #1f2937;
+    color: white;
+    padding: 20px 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+/* CALCULATOR MAIN */
+.calculator {
+    background: #fefefe;
+    max-width: 500px;
+    width: 90%;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 8px 16px ;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* TITLES */
+.calculator h2 {
+    font-size: 26px;
+    color: #333;
+    text-align: center;
+}
+
+h3 {
+    font-size: 20px;
+    color: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* DISPLAY */
+.display {
+    font-size: 24px;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    text-align: right;
+    color: #333;
+    font-weight: bold;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* KEYPAD */
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 10px;
+}
+
+.keypad button {
+    padding: 18px 0;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background: #4e73df;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.keypad button:hover {
+    background: #2e59d9;
+}
+
+.keypad button[data-action="clear"],
+.keypad button[data-action="backspace"] {
+    background: #fac131;
+    color: #030609;
+}
+
+.keypad button[data-action="clear"]:hover,
+.keypad button[data-action="backspace"]:hover {
+    background: #f1b00a;
+}
+
+.keypad button[data-action="calculate"] {
+    background: #09ef15;
+    grid-column: span 4;
+    font-size: 20px;
+}
+
+.keypad button[data-action="calculate"]:hover {
+    background: #17a673;
+}
+
+/* RESULT */
+.result {
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+    text-align: center;
+    padding: 10px;
+    border-top: 2px solid #eee;
+}
+
+/* HISTORY */
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#clear-history {
+    padding: 6px 14px;
+    font-size: 14px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#clear-history:hover {
+    background-color: #c82333;
+}
+
+#history-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#history-list li {
+    padding: 10px 14px;
+    margin: 6px 0;
+    background: #e9ecef;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .calculator {
+        padding: 20px;
+    }
+
+    .keypad button {
+        padding: 14px 0;
+        font-size: 16px;
+    }
+
+    .display {
+        font-size: 22px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo {
+        width: 36px;
+        height: 36px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .result {
+        font-size: 16px;
+    }
+}

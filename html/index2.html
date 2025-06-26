@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../css/style2.css">
+</head>
+<body>
+
+<header class="main-header">
+    <div class="header-content">
+        <img src="https://img.icons8.com/?size=100&id=w8uA2lyOFNbd&format=png&color=000000" alt="Logo" class="logo">
+        <h1>Smart Calculator</h1>
+    </div>
+</header>
+
+<main class="calculator">
+
+    <h2>Calculate</h2>
+
+    <input type="text" class="display" id="display" placeholder="0" readonly>
+
+    <div class="keypad">
+        <button data-value="(">(</button>
+        <button data-value=")">)</button>
+        <button data-action="clear">AC</button>
+        <button data-action="backspace">⌫</button>
+
+        <button data-value="7">7</button>
+        <button data-value="8">8</button>
+        <button data-value="9">9</button>
+        <button data-value="/">/</button>
+
+        <button data-value="4">4</button>
+        <button data-value="5">5</button>
+        <button data-value="6">6</button>
+        <button data-value="*">×</button>
+
+        <button data-value="1">1</button>
+        <button data-value="2">2</button>
+        <button data-value="3">3</button>
+        <button data-value="-">−</button>
+
+        <button data-value="00">00</button>
+        <button data-value="0">0</button>
+        <button data-value=".">.</button>
+        <button data-value="+">+</button>
+
+        <button class="equals-btn" data-action="calculate" style="grid-column: span 4;">=</button>
+    </div>
+
+    <div class="result">
+        Result: <span id="output">0</span>
+    </div>
+
+    <div class="history-header">
+        <h3>History</h3>
+        <button id="clear-history">Clear</button>
+    </div>
+
+    <ul id="history-list"></ul>
+
+</main>
+
+<script src="../js/index2.js"></script>
+</body>
+</html>
